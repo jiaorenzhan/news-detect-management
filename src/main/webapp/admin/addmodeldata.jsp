@@ -28,55 +28,55 @@
 <form class="layui-form layui-form-pane" action="" lay-filter="formFilter">
 
     <div class="layui-form-item">
-        <label class="layui-form-label">数据集id</label>
-        <input class="layui-input-block">
-            <input type="text" name="sortId" lay-verify="required" required autocomplete="off"  class="layui-input"><%=request.getParameter("id") %></input>
+        <label class="layui-form-label">数据集ID</label>
+        <div class="layui-input-block">
+            <input type="text" name="sortId" lay-verify="required" required autocomplete="off"  class="layui-input" value="<%=request.getParameter("id") %>">
         </div>
     </div>
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">ID</label>
-        <div class="layui-input-block">
-            <input type="text" name="id" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
-        </div>
-    </div>
+<%--    <div class="layui-form-item">--%>
+<%--        <label class="layui-form-label">数据ID</label>--%>
+<%--        <div class="layui-input-block">--%>
+<%--            <input type="text" name="id" lay-verify="required" required autocomplete="off" placeholder="请输入数据ID" class="layui-input">--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
     <div class="layui-form-item">
         <label class="layui-form-label">post_id</label>
         <div class="layui-input-block">
-            <input type="text" name="postId" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="postId" lay-verify="required" required autocomplete="off" placeholder="请输入post_id" class="layui-input">
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">post_text</label>
         <div class="layui-input-block">
-            <input type="text" name="postText" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="postText" lay-verify="required" required autocomplete="off" placeholder="请输入post_text" class="layui-input">
         </div>
     </div>
 
     <div class="layui-form-item">
         <label class="layui-form-label">user_id</label>
         <div class="layui-input-block">
-            <input type="text" name="userId" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="userId" lay-verify="required" required autocomplete="off" placeholder="请输入user_id" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">image_id</label>
         <div class="layui-input-block">
-            <input type="text" name="imageId" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="imageId" lay-verify="required" required autocomplete="off" placeholder="请输入image_id" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">username</label>
         <div class="layui-input-block">
-            <input type="text" name="username" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="username" lay-verify="required" required autocomplete="off" placeholder="请输入username" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">label</label>
         <div class="layui-input-block">
-            <input type="text" name="label" lay-verify="required" required autocomplete="off" placeholder="请输入分类名" class="layui-input">
+            <input type="text" name="label" lay-verify="required" required autocomplete="off" placeholder="请输入label" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
@@ -95,7 +95,7 @@
         //监听提交
         form.on('submit(submitButton)', function(data){
             $.ajax({
-                url: './sortListAdd',
+                url: './addModelData',
                 method: 'post',
                 data: data.field,
                 dataType: 'json',

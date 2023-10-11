@@ -44,7 +44,7 @@
                 {field: 'id', width: 80, title: 'ID', sort: true}
                 , {field: 'name', width: 180, title: '数据集名称', sort: true}
                 , {field: 'description', width: 480, title: '数据集描述', sort: true}
-                , {fixed: 'right', title: '操作', toolbar: '#operateBar', align: 'center', width: 200}
+                , {fixed: 'right', title: '操作', toolbar: '#operateBar', align: 'center', width: 300}
             ]]
         });
 
@@ -104,6 +104,7 @@
                             }
                         })
                     })
+                    break;
                 case 'model-data-list':
 
                     layer.open({
@@ -114,17 +115,17 @@
                         shadeClose: true,
                         content: "model_data_list.jsp?id=" + id
                     })
-
+                    break;
                 case 'add-model-data':
-
                     layer.open({
-                        title: '数据集详情',
+                        title: '数据添加',
                         type: 2,
                         area: ['800px', '600px'],
                         maxmin: true,
                         shadeClose: true,
-                        content: "model_data_list.jsp?id=" + id
+                        content: "addmodeldata.jsp?id=" + id
                     })
+                    break;
 
             }
         })

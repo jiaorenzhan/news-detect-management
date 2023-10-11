@@ -54,7 +54,7 @@
                         数据集管理</a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="./cardlist.jsp" target="content"><i class="layui-icon layui-icon-template-1"
+                    <a href="./librarydata.jsp" target="content"><i class="layui-icon layui-icon-template-1"
                                                                  style="font-size: 16px; color: #1E9FFF;"> </i>模型测试</a>
                 </li>
                 <%--        <li class="layui-nav-item"><a href="./borrowlist.jsp" target="content"><i class="layui-icon layui-icon-chart-screen" style="font-size: 16px; color: #1E9FFF;"></i> 借阅信息查询</a></li>

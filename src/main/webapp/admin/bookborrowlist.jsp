@@ -37,7 +37,7 @@
 %>
 <div class="layui-form">
   <table class="layui-table">
-    <colgroup>
+   <%-- <colgroup>
       <col width="150">
       <col width="150">
       <col width="200">
@@ -47,7 +47,7 @@
       <col width="220">
       <col width="200">
       <col width="200">
-    </colgroup>
+    </colgroup>--%>
     <thead>
       <tr>
 <%--        <th>ID</th>--%>
@@ -76,10 +76,10 @@
       </tr>
       <%} %>
     </thead>
-    <tbody>
+<%--    <tbody>
  	  <tr>
       </tr>
-    </tbody>
+    </tbody>--%>
   </table>
 </div>
 <div class="layui-form">
