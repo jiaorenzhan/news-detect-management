@@ -55,12 +55,12 @@
   <input type="id" name="id" value=<%=id %> class="layui-hide">
   <!-- 书名 -->
   <div class="layui-form-item">
-    <label class="layui-form-label">书名</label>
+    <label class="layui-form-label">模型名称</label>
     <div class="layui-input-block">
       <input type="text" name="name" value=<%=name %> required  lay-verify="required" placeholder="请输入书名" autocomplete="off" class="layui-input">
     </div>
   </div>
-  <!-- 作者 -->
+  <%--<!-- 作者 -->
   <div class="layui-form-item">
     <label class="layui-form-label">作者</label>
     <div class="layui-input-block">
@@ -74,7 +74,7 @@
       <select name="library_id" lay-verify="required">
       	<option value=""></option>
       	<% while( librarySet.next() ){ %>
-      		<%-- 选中原来的 图书馆--%>
+      		&lt;%&ndash; 选中原来的 图书馆&ndash;%&gt;
         	<option value=<%=librarySet.getString("id") %> <%if(Integer.parseInt(librarySet.getString("id")) == library_id){ out.print("selected"); } %> ><%=librarySet.getString("name") %></option>
         <%} %>
       </select>
@@ -106,10 +106,10 @@
       <input type="radio" name="status" value="1" title="可借" <%if(status==1) out.print("checked"); %>>
       <input type="radio" name="status" value="0" title="不可借" <%if(status==0) out.print("checked"); %> >
     </div>
-  </div>
+  </div>--%>
    
   <div class="layui-form-item layui-form-text">
-    <label class="layui-form-label">书籍简介</label>
+    <label class="layui-form-label">描述</label>
     <div class="layui-input-block">
       <textarea class="layui-textarea"  name="description" lay-verify="content" id="LAY_demo_editor"><%=description %></textarea>
     </div>

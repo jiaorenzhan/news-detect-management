@@ -13,7 +13,7 @@
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width:1200px;height:500px;">
-        <img class= "img-model" src="http://localhost:8080/library_war/public/image/main.png" >
+        <img class= "img-model" src="http://localhost:8080/library/public/image/main.png" >
     </div>
 
    <%-- <script type="text/javascript">

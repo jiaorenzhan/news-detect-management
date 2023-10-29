@@ -1,5 +1,6 @@
 package servlet.admin;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.PreparedStatement;
@@ -12,9 +13,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.sql.Connection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.UUID;
 
 import javabean.Base;
 import net.sf.json.JSONObject;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  * Servlet implementation class BookAdd
@@ -23,6 +30,7 @@ import net.sf.json.JSONObject;
 public class BookAdd extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("add book req"+req);
 		resp.setContentType("application/json; charset=utf8");
 		String name = req.getParameter("name");
 		String author = req.getParameter("author");
@@ -70,6 +78,23 @@ public class BookAdd extends HttpServlet {
 			json.put("msg", "error");
 		}
 		out.write(json.toString());
+
+
+
+
+
+		DiskFileItemFactory factory = new DiskFileItemFactory();
+		ServletFileUpload upload = new ServletFileUpload(factory);
+
+		factory.setSizeThreshold(1024 * 1024);
+		List items = null;
+		try {
+			items = upload.parseRequest(req);
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		}
+
+		Iterator iter = items.iterator();
 	}
 
 }

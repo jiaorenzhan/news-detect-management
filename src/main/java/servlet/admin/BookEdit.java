@@ -25,11 +25,11 @@ public class BookEdit extends HttpServlet {
 		resp.setContentType("application/json; charset=utf8");
 		String id = req.getParameter("id");
 		String name = req.getParameter("name");
-		String author = req.getParameter("author");
-		String library_id = req.getParameter("library_id");
-		String sort_id = req.getParameter("sort_id");
-		String position = req.getParameter("position");
-		String status = req.getParameter("status");
+//		String author = req.getParameter("author");
+//		String library_id = req.getParameter("library_id");
+//		String sort_id = req.getParameter("sort_id");
+//		String position = req.getParameter("position");
+//		String status = req.getParameter("status");
 		String description = req.getParameter("description");
 		System.out.println(description+"-------------");
 		JSONObject json = new JSONObject();
@@ -38,19 +38,20 @@ public class BookEdit extends HttpServlet {
 		PreparedStatement pstmt = null;
 		//ResultSet resultSet = null;
 		int result = 0;
-		String sql = "update books set name=? ,author=? ,library_id=? ,sort_id=? ,position=? ,status=?, description=? where id=?";
+//		String sql = "update books set name=? ,author=? ,library_id=? ,sort_id=? ,position=? ,status=?, description=? where id=?";
+		String sql = "update books set name=? , description=? where id=?";
 		PrintWriter out = resp.getWriter();
 		try {
 			connection = (Connection) Base.getConnection();
 			pstmt = connection.prepareStatement(sql);
 			pstmt.setString(1, name);
-			pstmt.setString(2, author);
-			pstmt.setString(3, library_id);
-			pstmt.setString(4, sort_id);
-			pstmt.setString(5, position);
-			pstmt.setString(6, status);
-			pstmt.setString(7, description);
-			pstmt.setString(8, id);
+//			pstmt.setString(2, author);
+//			pstmt.setString(3, library_id);
+//			pstmt.setString(4, sort_id);
+//			pstmt.setString(5, position);
+//			pstmt.setString(6, status);
+			pstmt.setString(2, description);
+			pstmt.setString(3, id);
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			
