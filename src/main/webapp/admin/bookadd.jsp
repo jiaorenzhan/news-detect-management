@@ -125,13 +125,13 @@
             <textarea class="layui-textarea" name="description" lay-verify="content" id="LAY_demo_editor"></textarea>
         </div>
     </div>
-    <div>
+<%--    <div>--%>
 
-        <img id="image" src="" style="width: 300px; height: 200px;display: block;"/>
-        <span><input type="file" name="file" id="file" onchange="selectImage(this);"></span>
+<%--        <img id="image" src="" style="width: 300px; height: 200px;display: block;"/>--%>
+<%--        <span><input type="file" name="file" id="file" onchange="selectImage(this);"></span>--%>
 
 
-    </div>
+<%--    </div>--%>
 
     <div class="layui-form-item">
         <div class="layui-input-block">

@@ -61,7 +61,7 @@
                         <li class="layui-nav-item"><a href="./rulelist.jsp"  target="content"><i class="layui-icon layui-icon-file-b" style="font-size: 16px; color: #1E9FFF;"> </i>借阅规则管理</a></li>
                         <li class="layui-nav-item"><a href="./managerlist.jsp" target="content"><i class="layui-icon layui-icon-group" style="font-size: 16px; color: #1E9FFF;"></i>图书管理员管理</a></li>--%>
                 <li class="layui-nav-item"><a href="./librarydata.jsp" target="content"><i
-                        class="layui-icon layui-icon-windows" style="font-size: 16px; color: #1E9FFF;"> </i>模型训练</a>
+                        class="layui-icon layui-icon-windows" style="font-size: 16px; color: #1E9FFF;"> </i>系统管理</a>
                 </li>
             </ul>
 

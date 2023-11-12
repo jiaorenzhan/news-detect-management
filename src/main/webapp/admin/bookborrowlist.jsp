@@ -22,7 +22,8 @@
 <%
 	String id = request.getParameter("id");
 	String name = request.getParameter("name");
-    String picName= "http://localhost:8080/library/public/image/model/" + id + ".jpg";
+    String systemHost = System.getProperty("system.host");
+    String picName= "http://"+systemHost+":8080/news-detect-management/public/image/model/" + id + ".jpg";
 	Connection connection = null;
 	PreparedStatement pstmt = null;
 	ResultSet resultSet = null;
